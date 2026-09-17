@@ -537,3 +537,112 @@ h2 {
     --nav-offset: calc(var(--nav-pad-y) + var(--nav-line) + var(--nav-pad-y));
   }
 }
+
+/* =========================
+   Pop theme (ポケカ部屋 / hobby pages)
+   本サイトの水×土の落ち着いた配色とは別に、
+   趣味ページ用のポップな配色を用意
+========================= */
+body.hobby-theme {
+  --color-pop-red: #ff6b6b;
+  --color-pop-yellow: #ffd93d;
+  --color-pop-blue: #4ecdc4;
+  --color-pop-purple: #a78bfa;
+  --color-pop-bg: #fffaf0;
+
+  background: var(--color-pop-bg);
+}
+
+body.hobby-theme .nav {
+  background: linear-gradient(90deg, var(--color-pop-red), var(--color-pop-yellow));
+}
+
+body.hobby-theme .header.hobby-header {
+  background: linear-gradient(
+    135deg,
+    var(--color-pop-red) 0%,
+    var(--color-pop-yellow) 50%,
+    var(--color-pop-blue) 100%
+  );
+  color: #2b2b2b;
+}
+
+body.hobby-theme h1,
+body.hobby-theme h2,
+body.hobby-theme h3 {
+  color: var(--color-pop-red);
+}
+
+body.hobby-theme h2 {
+  border-bottom: 2px dashed var(--color-pop-yellow);
+}
+
+.hobby-card {
+  border: 2px solid var(--color-pop-blue);
+  border-radius: 20px;
+}
+
+.placeholder-note {
+  font-size: 0.9em;
+  color: #8a8a8a;
+  background: #fff7e0;
+  border: 1px dashed var(--color-pop-yellow);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  display: inline-block;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hobby-item {
+  background: #fff;
+  border: 2px dashed var(--color-pop-blue);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.hobby-item-label {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-pop-purple);
+  margin-bottom: 0.3rem;
+}
+
+.hobby-results {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.hobby-results li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  border: 2px dashed var(--color-pop-blue);
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  background: #fff;
+}
+
+.hobby-result-date {
+  font-weight: 700;
+  color: var(--color-pop-red);
+  min-width: 6em;
+}
+
+.hobby-result-event {
+  font-weight: 600;
+}
+
+.hobby-result-score {
+  margin-left: auto;
+  color: var(--color-pop-purple);
+  font-weight: 600;
+}
